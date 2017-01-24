@@ -142,3 +142,28 @@ $ sudo dd if=hikey-uc16.img of=/dev/sdx bs=32M
 Please replace /dev/sdx with your SD card device file.
 
 
+Burn Ubuntu Core rootfs to EMMC FLASH
+--------------------------------
+
+ - Generate writable image from Ubuntu Core image:
+
+$ cd $UC16_PATH
+$ mkdir writable
+$ sudo kpartx -av hikey-uc16.img
+$ sudo mount /dev/mapper/loop0p2 writable
+$ sudo make_ext4fs -L writable -l 1500M -s writable.img writable/
+$ sudo umount writable
+$ sudo kpartx -d hikey-uc16.img
+
+Note:
+ 1. loop0p2 is the loop device of the second partition of hikey-uc16.img, it should
+ be replaced with your loop device of kpartx mapping.
+
+
+ - Burn writable image to EMMC FLASH:
+
+$ cd $UC16_PATH
+$ sudo ./burn-boot/hisi-idt.py -d /dev/ttyUSB1 --img1=l-loader/l-loader.bin
+$ sudo fastboot flash ptable l-loader/ptable-linux-8g.img
+$ sudo fastboot flash writable writable.img
+
