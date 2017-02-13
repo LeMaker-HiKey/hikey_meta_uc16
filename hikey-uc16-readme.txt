@@ -4,11 +4,18 @@
 Prepare enviroment
 ------------------
 
-install ubuntu xenial 16.04 and install below packages:
+ - install ubuntu xenial 16.04 and install below packages:
 
 $ apt-get install snapcraft parted kpartx \
   dosfstools squashfs-tools android-tools-fsutils \
-  gcc-aarch64-linux-gnu
+  gcc-aarch64-linux-gnu \
+  python3-parted
+
+ - install the latest ubuntu-image tools from git:
+
+$ git clone https://github.com/CanonicalLtd/ubuntu-image
+$ cd ubuntu-image
+$ sudo python3 setup.py install
 
 
 Get source of hikey snaps
