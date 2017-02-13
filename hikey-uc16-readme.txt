@@ -21,17 +21,17 @@ $ export UC16_PATH=/path/snap
  - Get hikey meta:
 
 $ cd $UC16_PATH
-$ git clone git//github.com/LeMaker-HiKey/hikey_snappy_meta.git
+$ git clone https://github.com/LeMaker-HiKey/hikey_snappy_meta.git
 
  - Get hikey kernel snap:
 
 $ cd $UC16_PATH
-$ git clone git//github.com/LeMaker-HiKey/hikey_linux_uc16.git
+$ git clone https://github.com/LeMaker-HiKey/hikey_linux_uc16.git
 
  - Get hikey gadget snap:
 
 $ cd $UC16_PATH
-$ git clone git//github.com/LeMaker-HiKey/hikey_gadget_snap_uc16.git
+$ git clone https://github.com/LeMaker-HiKey/hikey_gadget_snap_uc16.git
 
 
 Build and install u-boot to hikey
@@ -43,7 +43,7 @@ bootloader, we have to switch hikey to u-boot.
  - Get mainline u-boot source:
 
 $ cd $UC16_PATH
-$ git clone git//github.com/LeMaker-HiKey/hikey_u-boot.git u-boot
+$ git clone https://github.com/LeMaker-HiKey/hikey_u-boot.git u-boot
 $ cd u-boot
 $ git checkout -b hikey_snappy.test origin/hikey_snappy
 
@@ -53,7 +53,7 @@ $ cd $UC16_PATH
 $ git clone https://github.com/96boards/edk2.git
 $ git clone https://github.com/96boards/arm-trusted-firmware.git
 $ git clone https://github.com/96boards/burn-boot.git
-$ git clone git://github.com/96boards/l-loader.git
+$ git clone https://github.com/96boards/l-loader.git
 
 And follow u-boot/board/hisilicon/hikey/README to compile and burn to hikey board.
 
