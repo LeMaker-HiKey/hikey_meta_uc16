@@ -127,9 +127,10 @@ Build Ubuntu Core image
 ------------------
 
 $ cd $UC16_PATH
-$ sudo ubuntu-image -c stable --image-size 4G --extra-snaps \
-  ./hikey-snappy-gadget_16.04-1_arm64.snap --extra-snaps \
-  ./hikey-kernel_4.4.0_arm64.snap  -o hikey-uc16.img hikey.model
+$ sudo ubuntu-image -c stable \
+  --extra-snaps ./hikey-snappy-gadget_16.04-1_arm64.snap \
+  --extra-snaps ./hikey-kernel_4.4.0_arm64.snap \
+  -o hikey-uc16.img hikey.model
 
 
 Burn Ubuntu Core image to SD card
