@@ -28,7 +28,7 @@ $ export UC16_PATH=/path/snap
  - Get hikey meta:
 
 $ cd $UC16_PATH
-$ git clone https://github.com/LeMaker-HiKey/hikey_snappy_meta.git
+$ git clone https://github.com/LeMaker-HiKey/hikey_meta_uc16.git
 
  - Get hikey kernel snap:
 
