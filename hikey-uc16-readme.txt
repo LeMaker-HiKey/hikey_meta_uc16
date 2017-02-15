@@ -79,7 +79,7 @@ Build hikey kernel snap
 
 $ cd $UC16_PATH
 $ cd hikey_linux_uc16
-$ git checkout -b snappy_v4.4-c28 origin/snappy_v4.4-c28
+$ git checkout -b snappy_v4.4-release origin/snappy_v4.4-release
 $ snapcraft --target-arch arm64 snap
 $ ls hikey-kernel_4.4.0_arm64.snap
 $ cp hikey-kernel_4.4.0_arm64.snap ../
